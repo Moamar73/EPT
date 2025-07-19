@@ -1,0 +1,138 @@
+@keyframes animCloud {
+    from {
+        -webkit-transform: translateX(100%)
+    }
+    to {
+        -webkit-transform: translateX(-100%)
+    }
+}
+.agt-faq-section-5 {
+	z-index: 1;
+	overflow: hidden;
+	padding-top: 305px;
+	.line_shape_2 {
+		left: 0;
+		top: 170px;
+		z-index: -1;
+		#paper-planes {
+			path {
+				transform: translateY(-13px);
+			}
+		}
+	}
+	.fq-shape-1 {
+		right: 0;
+		top: 20px;
+		@media #{$xs,$xxs} {
+			display: none;
+		}
+	}
+	.fq-shape-2 {
+		left: 0;
+		bottom: 0;
+		filter: blur(5px);
+		@media #{$xs,$xxs} {
+			display: none;
+		}
+	}
+	.fq-cloud-1 {
+		top: 0;
+		left: 0;
+		animation: animCloud 20s infinite linear;
+		@media #{$xs,$xxs} {
+			display: none;
+		}
+	}
+	.fq-cloud-2 {
+		top: 0;
+		right: 0;
+		z-index: -1;
+		animation: animCloud 30s infinite linear;
+		@media #{$xs,$xxs} {
+			display: none;
+		}
+	}
+	.agt-section-title-5 {
+		margin: 0 auto;
+		max-width: 700px;
+	}
+}
+.agt-fq-accordion5 {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 870px;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	.accordion-item,
+	.accordion-button:not(.collapsed),
+	.accordion-button {
+		background-color: transparent;
+	}
+	.accordion-item {
+		border: none;
+		margin-bottom: 25px;
+		padding-bottom: 25px;
+		border-bottom: 1px solid #fff;
+		transition: all 500ms ease-in-out;
+		@media #{$xxs} { 
+			padding: 23px 15px 23px 25px;
+		}
+	}
+	.accordion-button {
+		padding: 0;
+		border: none;
+		font-size: 25px;
+		position: relative;
+		color: var(--agt-trv);
+		transition: all 500ms ease;
+		span {
+			max-width: 85%;
+			display: inline-block;
+		}
+	}
+
+	.accordion-button:focus {
+		border: none;
+		box-shadow: none;
+	}
+	.accordion-body {
+		font-size: 18px;
+		line-height: 30px;
+		line-height: 1.667;
+		padding: 14px 0px 0px;
+	}
+	.accordion-button::after {
+		top: 5px;
+		right: 0;
+		opacity: .7;
+		font-size: 16px;
+		content: '\f067';
+		font-weight: 900;
+		position: absolute;
+		border-radius: 100%;
+		background-image: none;
+		color: var(--agt-base-color-9);
+		font-family: 'Font Awesome 6 free';
+		transition: all 500ms ease;
+	}
+	.accordion-button:not(.collapsed) { 
+		box-shadow: none;
+		padding-bottom: 15px;
+		border-bottom: 1px solid var(--agt-trv);
+		&:before {
+			opacity: 1;
+			color: var(--agt-base-color-9);
+		}
+		&:after {
+			opacity: 1;
+			content: '\f068';
+			color: var(--agt-base-color-9);
+		}
+	}
+}
+.agt-fq-bottom {
+	h3 {
+		font-size: 32px;
+	}
+}

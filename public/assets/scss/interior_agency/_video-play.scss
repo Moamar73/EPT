@@ -1,0 +1,133 @@
+@keyframes Move_animation_1 {
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-80px);
+	}
+	50% {
+		transform: translateX(0);
+	}
+	75% {
+		transform: translateX(80px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+.agt-video-play-section-6 {
+	z-index: 1;
+	overflow: hidden;
+	.agt-in-shape-1 {
+		top: 70px;
+		left: 20px;
+		z-index: -1;
+		animation: Move_animation_1 12s infinite linear alternate;
+	}
+	.agt-in-shape-2 {
+		top: 0;
+		right: 0;
+		z-index: -1;
+	}
+	.agt-in-shape-3 {
+		left: 0;
+		top: 228px;
+		z-index: -1;
+	}
+}
+.agt-vp-area-6 {
+	overflow: hidden;
+	.item-img {
+		overflow: hidden;
+		border-bottom-left-radius: 64px;
+		border-bottom-right-radius: 64px;
+		img {
+			width: 	100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media #{$xs} {
+			height: 530px;
+		}
+		@media #{$xxs} {
+			height: 400px;
+		}
+		@media #{$xxs} {
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+		}
+	}
+	.video-play-btn {
+		left: 0;
+		top: 50%;
+		right: 0;
+		opacity: 1;
+		margin: 0 auto;
+		position: absolute;
+		visibility: visible;
+		.video_btn_border {
+			border: 15px solid rgba(255, 255, 255, 0.7);
+		}
+		a {
+			width: 120px;
+			height: 120px;
+			display: flex;
+			margin: 0 auto;
+			border-radius: 100%;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			position: relative;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			background-color: #fff;
+			color: var(--agt-base-color-10);
+		}
+	}
+	.item-text {
+		left: 0;
+		right: 0;
+		bottom: -22px;
+		position: absolute;
+		@media #{$lg,$md,$sm,$xs} {
+			bottom: 0;
+		}
+		h3 {
+			opacity: .64;
+			line-height: 1;
+			font-size: 128px;
+			color: var(--agn-clr-white-1);
+			@media #{$lg,$md} {
+				font-size: 100px;
+			}
+			@media #{$sm,$xs} {
+				font-size: 60px;
+			}
+			@media #{$xxs} {
+				font-size: 40px;
+			}
+		}
+	}
+	.item-shape {
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		@media #{$xl,$lg,$md,$sm,$xs} {
+			right: -50px;
+		}
+		@media #{$md,$sm,$xs} {
+			display: none;
+		}
+	}
+	&.ver_2 {
+		.item-img {
+			border-radius: 12px;
+		}
+		.video-play-btn {
+			a {
+				color: #596EFF;
+			}
+		}
+	}
+}

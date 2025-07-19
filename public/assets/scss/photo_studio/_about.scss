@@ -1,0 +1,39 @@
+.agt-about-section-7 {
+	.agt-cam-img {
+		right: 0;
+		bottom: 0;
+		opacity: .72;
+	}
+}
+.agt-about-content-7 {
+	max-width: 985px;
+}
+.agt_abt_btn {
+	margin-top: 70px;
+	font-weight: 600;
+	color: var(--agt-blk-clr-4);
+	position: relative;
+	&:before {
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 2px;
+		content: '';
+		position: absolute;
+		transition: all 500ms ease-in-out;
+		background-color: var(--agt-blk-clr-4);
+	}
+	i {
+		margin-left: 6px;
+		transform: rotate(-45deg);
+		transition: all 200ms ease-in-out;
+	}
+	&:hover {
+		&:before {
+			width: 100%;
+		}
+		i {
+			transform: rotate(0deg);
+		}
+	}
+}

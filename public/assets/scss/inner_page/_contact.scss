@@ -1,0 +1,65 @@
+.ag-p-contact-content {
+	gap: 28px;
+	padding: 28px;
+	display: grid;
+	background-color: #fff;
+	grid-template-columns: 1fr 1fr 1fr;
+	@media #{$lg} {
+		grid-template-columns: repeat(3, 2fr);
+	}
+	@media #{$md,$sm} {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media #{$xs} {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.ag-p-contact-item {
+		padding: 50px;
+		background-color: var(--agt-gray-1);
+		@media #{$lg,$md,$sm,$xs} {
+			padding: 30px;
+			
+		}
+		.item-icon {
+			top: 15px;
+			right: 50px;
+			opacity: .1;
+			line-height: 1;
+			font-size: 60px;
+			position: absolute;
+			@media #{$lg,$md,$sm,$xs} {
+				top: 10px;
+				right: 10px;
+			}
+			@media #{$xs} {
+				display: none;
+			}
+		}
+		h3 {
+			font-size: 18px;
+			font-weight: 700;
+			padding-bottom: 10px;
+			color: var(--agn-clr-black-2);
+			ont-family: var(--test-sohne-500);
+		}
+		p {
+			color: #414141;
+		}
+	}
+}
+.ag-cp-form-content {
+	gap: 30px 60px;
+	background-color: #FDFBFB;
+	@media #{$md,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.art-blog-single-comment-form {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		border: none;
+		max-width: 588px;
+		background: transparent;
+	}
+}

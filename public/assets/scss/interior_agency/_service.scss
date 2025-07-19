@@ -1,0 +1,37 @@
+.agt-service-section-7 {
+	z-index: 1;
+	overflow: hidden;
+	position: relative;
+	background-color: #fff;
+	border-bottom-left-radius: 64px;
+	border-bottom-right-radius: 64px;
+}
+.agt-service-content-7 {
+	display: flex;
+	gap: 40px 30px;
+	justify-content: space-between;
+	@media #{$lg,$md,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.agt-sr-item-7 {
+	max-width: 	225px;
+	text-align: center;
+	.item-icon {
+		position: relative;
+		margin-bottom: 23px;
+		transition: all 500ms ease-in-out;
+		svg {
+			path {
+				stroke-dasharray: 5000;
+				stroke-dashoffset: 0;
+			}
+		}
+	}
+	&:hover {
+		.item-icon {
+			animation: rubberBand .7s;
+		}
+	}
+}

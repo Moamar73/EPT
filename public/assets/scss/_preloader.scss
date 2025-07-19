@@ -1,0 +1,108 @@
+/* 
+	preloader-css-start
+*/
+
+
+#preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	z-index: 99999999;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+	background-color: var(--agn-clr-white-1);
+	transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+
+	.preloader-wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+
+		.loading {
+			font-size: 50px;
+			font-family: var(--test-sohne-500);
+			font-weight: 700;
+			text-align: center;
+			span {
+			  display: inline-block;
+			  margin: 0 -.05em;
+			}
+		}
+
+		
+		.loading08 {
+			span {
+				position: relative;
+				color: var(--agn-clr-pr-1);
+				animation: loading08-parent 5s infinite;
+
+				&::after {
+					position: absolute;
+					top: 0;
+					left: 0;
+					content: attr(data-text);
+					color: #fff;
+					opacity: 0;
+					animation: loading08-child 5s infinite;
+				}
+
+				@for $i from 1 through 8 {
+					&:nth-child(#{$i+1})::after {
+						animation-delay: #{$i*.2}s;
+					}
+				}
+			}
+		}
+		
+
+	}
+
+	&:is(.preloaded) {
+		transform: scale(1.5) ;
+		
+		.preloader-wrap {
+			opacity: 0;
+		}
+	}
+
+
+	&:is(.has-home-2) {
+		background: var(--pf-clr-white-1);
+		.dot {
+			background-color: var(--pf-clr-pr-2);
+		}
+	}
+
+	
+
+
+}
+
+
+@keyframes loading08-parent {
+	0%, 35%, 100% {
+	  color: var(--agn-clr-pr-1);
+	}
+	60%, 80% {
+	  color: var(--agn-clr-pr-2);
+	}
+}
+@keyframes loading08-child {
+	0% {
+		opacity: 1;
+	}
+	25%, 100% {
+		opacity: 0;
+	}
+}
+
+
+
+/* 
+	preloader-css-end
+*/

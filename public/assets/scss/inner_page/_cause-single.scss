@@ -1,0 +1,147 @@
+.agt-cause-single-section {
+	.container {
+		margin: 0 auto;
+		max-width: 1320px;
+	}
+}
+.agt-cs-top-content {
+	padding-bottom: 30px;
+	border-bottom: 1px solid rgba(32, 29, 30, .12);
+	@media #{$md,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+	}
+}
+.agt-cs-top-author {
+	gap: 30px;
+	max-width: 805px;
+	@media #{$lg,$md,$sm,$xs} {
+		margin: 0 auto;
+		flex-wrap: wrap;
+		margin-bottom: 40px;
+		justify-content: center  !important;
+	}
+	.item-img {
+		width: 142px;
+		height: 142px;
+		overflow: hidden;
+		border-radius: 100%;
+		@media #{$md,$sm,$xs} {	
+			margin: 0 auto;
+		}
+	}
+	.item-text {
+		max-width: 630px;
+		@media #{$md,$sm,$xs} {	
+			margin: 0 auto;	
+			max-width: 850px;
+		}
+		h3 {
+			line-height: 1;
+			color: #201D1E;
+			font-size: 22px;
+			padding-bottom: 8px;
+			font-family: var(--playfair);
+		}
+		span {
+			color: var(--agn-clr-pr-9);
+		}
+		p {
+			padding-top: 15px;
+			@media #{$md,$sm,$xs} {
+				margin: 0 auto;
+				max-width: 640px;
+			}
+		}
+	}
+}
+.agt-cs-top-collect {
+	width: 100%;
+	max-width: 395px;
+	position: relative;
+	padding-left: 60px;
+	@media #{$md,$sm,$xs} {
+		padding-left: 0;
+		margin: 0 auto;
+	}
+	&:before {
+		top: 0;
+		left: 0;
+		width: 1px;
+		content: '';
+		height: 100%;
+		position: absolute;
+		background-color: rgba(32, 29, 30, .12);
+		@media #{$md,$sm,$xs} {
+			display: none;
+		}
+	}
+	h3 {
+		line-height: 1;
+		font-size: 64px;
+		font-weight: 700;
+		padding-bottom: 18px;
+		color: var(--agn-clr-pr-9);
+		@media #{$md,$sm,$xs} {
+			padding-bottom: 5px;
+		}
+	}
+	.value-target {
+		width: 100%;
+		padding: 15px;
+		gap: 15px 45px;
+		border-radius: 100px;
+		border: 1px solid #F04C23;
+		.item-value {
+			font-size: 16px;
+			span {
+				color: #201D1E;
+				font-weight: 700;
+			}
+		}
+	}
+}
+.agt-cs-single-content {
+	gap: 30px;
+	display: flex;
+	justify-content: space-between;
+	@media #{$md,$sm,$xs} {
+		flex-wrap: wrap;
+	}
+}
+.agt-cs-single-text {
+	max-width: 730px;
+	@media #{$md,$sm,$xs} {
+		max-width: 100%;
+	}
+	h2 {
+		color: #23272A;
+		font-size: 32px;
+		font-weight: 600;
+		padding-bottom: 20px;
+		font-family: var(--playfair);
+	}
+	p {
+		padding-bottom: 30px;
+	}
+	.agt-vp-area-6 .video-play-btn a {
+		width: 90px;
+		height: 90px;
+	}
+}
+.agt-cs-single-donate-form {
+	@media #{$md,$sm,$xs} {
+		width: 100%;
+	}
+	.item-form {
+		padding: 45px;
+		max-width: 526px;
+		border-radius: 12px;
+		background-color: #fff;
+		@media #{$md,$sm,$xs} {
+			max-width: 100%;
+		}
+
+	} 
+}

@@ -1,0 +1,237 @@
+/*// Mobile Menu style*/
+/*----------------------------------------------------*/
+.mobile_logo {
+	top: 10px;
+	left: 15px;
+	display: none;
+	position: absolute;
+}
+.mobile_menu_content {
+	top: 0px;
+	bottom: 0;
+	left: -100%;
+	height: 100vh;
+	z-index: 101;
+	position: fixed;
+	width: 100%;
+	max-width: 500px;
+	overflow-y: scroll;
+	background-color: #0f0d0d;
+	padding: 20px 20px 35px 20px;
+	box-shadow: 0px 3px 5px rgba(100, 100, 100, .19);
+	transition: all 0.5s ease-in;
+	&::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	&::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		outline: none;
+		border-radius: 0px;
+		background: #000;
+		background-size: 200%, 1px;
+	}
+	.mobile-main-navigation {
+		width: 100%;
+		.navbar-nav {
+			width: 100%;
+		}
+	}
+	.dropdown:after {
+		display: none;
+	}
+	.navbar-nav .dropdown-menu {
+		position: static !important;
+		transform: none !important;
+	}
+	.mobile-main-navigation .navbar-nav li {
+		padding: 0;
+		width: 100%;
+		display: block;
+		transition: .3s all ease-in-out;
+		border-bottom: 1px solid rgba(255, 255, 255, 6%);
+		a {
+			padding: 0;
+			width: 100%;
+			color: #fff;
+			display: block;
+			font-weight: 500;
+			font-size: 18px;
+			text-transform: capitalize;
+			padding: 10px 30px 10px 0;
+		}
+	}
+	.m-brand-logo {
+		width: 120px;
+		margin: 50px auto;
+	}
+}
+.mobile_menu_wrap.mobile_menu_on .mobile_menu_content {
+	left: 0px;
+	transition: all 0.7s ease-out;
+}
+.mobile_menu_overlay {
+	top: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 100;
+	right: 0%;
+	height: 120vh;
+	opacity: 0;
+	visibility: hidden;
+	background-color: rgba(0, 0, 0, .9);
+	transition: all .5s ease-in-out;
+}
+.mobile_menu_overlay_on {
+	overflow: hidden;
+}
+.mobile_menu_wrap.mobile_menu_on .mobile_menu_overlay{
+	opacity: 1;
+	visibility: visible;
+}
+.mobile_menu_button {
+	z-index: 5;
+	padding: 0;
+	border: none;
+	display: none;
+	font-size: 24px;
+	cursor: pointer;
+	margin-left: 10px;
+	line-height: 38px;
+	text-align: center;
+	background-color: transparent;
+	span {
+		width: 30px;
+		height: 2px;
+		display: block;
+		margin-bottom: 5px;
+		background-color: #fff;
+		&:nth-child(2) {
+			width: 25px;
+		}
+		&:last-child {
+			width: 20px;
+			margin-bottom: 0;
+		}
+	}
+	@media #{$md,$sm,$xs} {
+		display: block;
+	}
+}
+.mobile_menu{
+	.mobile-main-navigation .navbar-nav li a:after {
+		display: none;
+	}
+	.mobile-main-navigation .dropdown > .dropdown-menu {
+		opacity: 1;
+		visibility: visible;
+	}
+	.mobile_menu_content .mobile-main-navigation .navbar-nav {
+		.dropdown-menu {
+			width: 100%;
+			border: none;
+			display: none;
+			transition: none;
+			box-shadow: none;
+			margin-bottom: 15px;
+			background-color: transparent;
+			li {
+				border: none;
+				line-height: 1;
+				&:hover {
+					background-color: transparent;
+				}
+				a {
+					font-size: 16px;
+					padding-left: 20px;
+					color: #fff !important;
+					&:hover {
+						color: var(--base-color);
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+	.dropdown {
+		position: relative;
+		.dropdown-btn {
+			top: 4px;
+			right: 0;
+			width: 100%;
+			height: 40px;
+			display: flex;
+			color: #9397a7;
+			font-size: 16px;
+			cursor: pointer;
+			position: absolute;
+			border-radius: 5px;
+			align-items: center;
+			justify-content: end;
+			&.toggle-open {
+				transform: rotate(90deg);
+			}
+		}
+	}
+	.mobile_menu_close {
+		top: 25px;
+		right: 25px;
+		cursor: pointer;
+		color: #d60606;
+		font-size: 20px;
+		position: absolute;
+	}
+	.mobile-search-bar {
+		overflow: hidden;
+		border-radius: 5px;
+		margin-bottom: 40px;
+		input {
+			color: #fff;
+			width: 100%;
+			height: 60px;
+			border: none;
+			font-size: 14px;
+			padding-left: 15px;
+			border-radius: 5px;
+			border-bottom: none;
+			background-color: #2d2d2d;
+			&::placeholder {
+				color: #fff;
+				font-size: 14px;
+			}
+		}
+		button {
+			top: 5px;
+			padding: 0;
+			right: 10px;
+			color: #fff;
+			width: 50px;
+			height: 50px;
+			border: none;
+			position: absolute;
+			background-color: transparent;
+		}
+	}
+	.ptx-mobile-header-social {
+		margin-top: 40px;
+		a {
+			color: #fff;
+			margin: 0px 8px;
+			font-size: 15px;
+			&:hover {
+				color: #4400E7;
+			}
+		}
+	}
+}
+.agt-mobile-menu-btn {
+	border: none;
+	display: none;
+	@media #{$md,$sm,$xs} {
+		display: block;
+	}
+}

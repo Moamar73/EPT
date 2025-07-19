@@ -1,0 +1,134 @@
+.agt-ab-content-4 {
+	gap: 30px 40px;
+	@media #{$lg,$md,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+}
+.agt-ab-text-4 {
+	overflow: hidden;
+	max-width: 532px;
+}
+.agt-ab-img-4 {
+	.item-img {
+		overflow: hidden;
+		img {
+			border-radius: 12px;
+		} 
+	}
+}
+.agt-about-feature-4 {
+	max-width: 644px;
+}
+.agt-ab-ft-img-4 {
+	overflow: hidden;
+	border-radius: 16px ;
+}
+.agt-ab-ft-item-list {
+	padding-left: 12px;
+	position: relative;
+	&:before {
+		top: 0;
+		z-index: 2;
+		width: 1px;
+		left: 120px;
+		height: 100%;
+		content: '';
+		position: absolute;
+		background-color: #DFE0DF;
+		@media #{$sm,$xs} {
+			display: none;
+		}
+	}
+}
+.agt-ab-ft-item {
+	height: 76px;
+	z-index: 1;
+	gap: 15px 32px;
+	overflow: hidden;
+	position: relative;
+	transition: all 500ms ease-in-out;
+	@media #{$sm,$xs} {
+		height: auto;
+		flex-wrap: wrap;
+		padding: 20px 30px;
+		margin-bottom: 20px;
+	}
+	&:before {
+		top: 0;
+		left: 0;
+		width: 0%;
+		z-index: -1;
+		height: 100%;
+		content: '';
+		border-radius: 8px;
+		position: absolute;
+		transition: all 500ms ease-in-out;
+		background: linear-gradient(90deg, #F0F0F0 0%, rgba(246, 246, 246, 0.12) 100%);
+	}
+	&.active,
+	&:hover {
+		height: 126px;
+		@media #{$sm,$xs} {
+			height: auto;
+		}
+		&:before {
+			width: 100%;
+		}
+		.item-text {
+			h3 {
+				font-weight: 600;
+				padding-bottom: 8px;
+			}
+			p {
+				opacity: 1;
+				height: 48px;
+				@media #{$sm,$xs} {
+					height: auto;
+				}
+			}
+		}
+		.item-icon {
+			transform: scale(1.2);
+			svg {
+				path {
+					fill: var(--agt-blk-clr-2);
+				}
+			}
+		}
+	}
+	.item-icon {
+		width: 119px;
+		transition: all 500ms ease-in-out;
+		@media #{$sm,$xs} {
+			width: auto;
+		}
+		svg {
+			path {
+				transition: all 500ms ease-in-out;
+			}
+		}
+	}
+	.item-text {
+		max-width: 420px;
+		h3 {
+			font-size: 18px;
+			font-weight: 500;
+			color: var(--agt-blk-clr-2);
+			transition: all 500ms ease-in-out;
+			@media #{$sm,$xs} {
+				font-weight: 600;
+				padding-bottom: 8px;
+			}
+		}
+		p {
+			height: 0;
+			opacity: 0;
+			transition: all 500ms ease-in-out;
+			@media #{$sm,$xs} {
+				height: auto;
+				opacity: 1;
+			}
+		}
+	}
+}

@@ -1,0 +1,116 @@
+.agt-cta-section-6 {
+	overflow: hidden;
+	padding-top: 200px;
+	position: relative;
+	border-bottom-left-radius: 64px;
+	border-bottom-right-radius: 64px;
+	&.ver_2 {
+		border-radius: 0;
+	}
+	.item-cursor {
+		top: 57%;
+		left: 50%;
+		z-index: 2;
+		opacity: 0;
+		position: absolute;
+		border-radius: 100%;
+		-webkit-transition: 500ms cubic-bezier(0.23, 1, 0.32, 1);
+		transition: 500ms cubic-bezier(0.23, 1, 0.32, 1);
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		a {
+			width: 128px;
+			color: var(--agt-base-color-10);
+			height: 128px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			font-size: 16px;
+			font-weight: 600;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			border-radius: 100%;
+			white-space: nowrap;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			border: 1px solid var(--agt-base-color-10);
+			backdrop-filter: blur(16px);
+			@media #{$md,$sm,$xs} {
+				height: 90px;
+				width: 90px;
+				font-size: 14px;
+			}
+			i {
+				top: -8px;
+				margin-left: 5px;
+				position: relative;
+				transform: rotate(-70deg);
+			}
+			span {
+				transform: rotate(-16deg);
+			}
+		}
+	}
+	&:hover {
+		.item-cursor {
+			opacity: 1;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+.agt-cta-content-6 {
+	overflow: hidden;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 860px;
+	@media #{$md,$sm,$xs} {
+		padding-bottom: 500px;
+	}
+	@media #{$xxs} {
+		padding-bottom: 250px;
+	}
+	&:before,
+	&:after {
+		top: 0;
+		left: 0;
+		width: 100%;
+		content: '';
+		height: 300px;
+		position: absolute;
+		background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+	}
+	.item-text {
+		z-index: 2;
+		position: relative;
+		h2 {
+			line-height: 1;
+			margin: 0 auto;
+			font-size: 90px;
+			max-width: 800px;
+			@media #{$md,$sm,$xs} {
+				font-size: 65px;
+			}
+			@media #{$xxs} {
+				font-size: 45px;
+			}
+		}
+		.agt-section-title-7 {
+			margin: 0 auto;
+			max-width: 995px;
+		}
+	}
+	.item-img {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

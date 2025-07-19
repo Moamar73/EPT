@@ -1,0 +1,127 @@
+.agt-testimonial-section {
+	overflow: hidden;
+}
+.agt-tst-top-content {
+	gap: 20px;
+	.agt-section-title-1 {
+		max-width: 630px;
+	}
+}
+.agt-tst-nav-arrow {
+	gap: 20px;
+	width: 100%;
+	max-width: 204px;
+	.nav-arrow {
+		z-index: 1;
+		width: 56px;
+		height: 56px;
+		position: relative;
+		border-radius: 8px;
+		border: 1px solid #A0A4A7;
+		transition: 800ms var(--agn-cube-1);
+		&:before {
+			top: 0;
+			left: 0;
+			width: 100%;
+			content: '';
+			height: 100%;
+			position: absolute;
+			border-radius: 8px;
+			transform: scale(0);
+			transition: 800ms var(--agn-cube-1);
+			background-color: var(--agt-base-color-1);
+		}
+		&:hover {
+			border: 1px solid var(--agt-base-color-1);
+			&:before {
+				z-index: -1;
+				transform: scale(1.0);
+			}
+		}
+	}
+	.agt-testi-pagination-2 {
+		color: #B1B0B0;
+		font-size: 20px;
+		max-width: 52px; 
+		.swiper-pagination-current {
+			color: var(--agn-clr-black-2);
+			font-family: var(--test-sohne-600);
+		}
+	}
+}
+.agt-tst-s-active {
+	max-width: 1936px;
+	margin: 0 -47% 0 0;
+	@media #{$lg} {
+		margin: 0 -10% 0 0;
+	}
+	@media #{$md,$sm,$xs} {
+		margin: 0;
+	}
+}
+.agt-tst-item {
+	max-width: 625px;
+	padding: 20px 0px;
+	@media #{$md,$sm,$xs} {
+		margin: 0 auto;
+	}
+	@media #{$xs} {
+		width: 100%;
+		max-width: 100%;
+	}
+	.item-inner {
+		gap: 32px;
+		z-index: 1;
+		padding: 30px 0px;
+		position: relative;
+		@media #{$xs} {
+			padding: 20px;
+			flex-wrap: wrap;
+		}
+		&:before {
+			top: 0;
+			right: 0;
+			width: 80%;
+			z-index: -1;
+			content: '';
+			height: 100%;
+			position: absolute;
+			background-color: #fff;
+			box-shadow: 0px 0px 24px 0px #00000014;
+			@media #{$xs} { 
+				width: 100%;
+			}
+		}
+	}
+	.item-img {
+		width: 205px;
+		height: 232px;
+		background-color: var(--agt-gray-2);
+		clip-path: polygon( 82.439% 0%,0% 0%,0% 100%,100% 100%,100% 15.517%,90.732% 7.615%,82.439% 0% );
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.item-text {
+		max-width: 345px;
+		h3 {
+			font-size: 22px;
+			line-height: 1.23;
+			padding-bottom: 16px;
+			color: var(--agn-clr-black-2);
+			font-family: var(--test-sohne-500);
+		}
+		p {
+			padding-bottom: 20px;
+		}
+		.ts-author {
+			h4 {
+				font-size: 18px;
+				padding-bottom: 2px;
+				color: var(--agn-clr-black-2);
+				font-family: var(--test-sohne-600);
+			}
+		}
+	}
+}

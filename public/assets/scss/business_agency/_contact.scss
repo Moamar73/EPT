@@ -1,0 +1,88 @@
+.agt-contact-section {
+	z-index: 1;
+	overflow: hidden;
+	.agt-contact-bg {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+.agt-cn-form {
+	width: 100%;
+	max-width: 592px;
+	background-color: #fff;
+	padding: 50px 48px 60px;
+	clip-path: polygon( 100% 0%,0% 0%,0% 100%,87.162% 100%,93.328% 94.322%,100% 88.013%,100% 0% );
+}
+.agt-cn-form{
+	h3 {
+		font-size: 36px;
+		padding-bottom: 15px;
+		color: var(--agn-clr-black-2);
+		font-family: var(--test-sohne-500);
+	}
+}
+.agt-contact-form-input {
+	@media #{$md,$sm,$xs} {
+		max-width: 100%;
+	}
+	.input-field {
+		margin-bottom: 30px;
+		label {
+			color: #261723;
+			display: block;
+			line-height: 1;
+			font-size: 12px;
+			font-family: var(--test-sohne-600);
+			letter-spacing: 2px;
+		}
+		input,textarea {
+			width: 100%;
+			height: 40px;
+			border: none;
+			padding-bottom: 5px;
+			background-color: transparent;
+			border-bottom: 2px solid var(--agt-gray-1);
+			transition: all 500ms ease-in-out;
+			&::placeholder {
+				opacity: .56;
+			}
+			&:focus {
+				border-bottom: 2px solid #E9E9E9;
+				border-bottom: 2px solid var(--agn-clr-black-2);
+			}
+		}
+		textarea {
+			height: 75px;
+			padding-top: 10px;
+		}
+	}
+	button {
+		color: #fff;
+		height: 56px;
+		border: none;
+		font-size: 16px;
+		padding: 0px 30px;
+		color: var(--agn-clr-black-2);
+		font-family: var(--test-sohne-500);
+		background-color: var(--agt-base-color-1);
+		transition: all 300ms ease-in-out;
+		clip-path: polygon(100% 7.143%, 100% 7.143%, 99.973% 5.984%, 99.894% 4.885%, 99.767% 3.86%, 99.598% 2.924%, 99.39% 2.092%, 99.147% 1.378%, 98.874% 0.797%, 98.575% 0.364%, 98.255% 0.093%, 97.917% 0%, 2.083% 0%, 2.083% 0%, 1.745% 0.093%, 1.425% 0.364%, 1.126% 0.797%, 0.853% 1.378%, 0.61% 2.092%, 0.402% 2.924%, 0.233% 3.86%, 0.106% 4.885%, 0.027% 5.984%, 0% 7.143%, 0% 92.857%, 0% 92.857%, 0.027% 94.016%, 0.106% 95.115%, 0.233% 96.14%, 0.402% 97.076%, 0.61% 97.908%, 0.853% 98.622%, 1.126% 99.203%, 1.425% 99.636%, 1.745% 99.907%, 2.083% 100%, 88.277% 100%, 88.277% 100%, 88.432% 99.98%, 88.585% 99.921%, 88.736% 99.824%, 88.884% 99.69%, 89.028% 99.518%, 89.169% 99.311%, 89.305% 99.069%, 89.436% 98.792%, 89.561% 98.481%, 89.679% 98.138%, 95.874% 78.795%, 99.319% 68.037%, 99.319% 68.037%, 99.444% 67.614%, 99.557% 67.161%, 99.658% 66.679%, 99.746% 66.172%, 99.822% 65.643%, 99.885% 65.093%, 99.935% 64.527%, 99.971% 63.947%, 99.993% 63.356%, 100% 62.756%, 100% 7.143%);
+		i {
+			top: 4px;
+			font-size: 18px;
+			position: relative;
+		}
+		&:hover {
+			color: #fff;
+			background-color: var(--agt-blue-color);
+		}
+	}
+}

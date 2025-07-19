@@ -1,0 +1,138 @@
+.agt-testimonial-section-3 {
+	overflow: hidden;
+	&.ver_2 {
+		font-family: var(--inter);
+	}
+}
+.agt-tst-wrap-3 {
+	margin-right: -290px;
+	margin-left: -40px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+}
+.agt-tst-slider-3 {
+	padding-bottom: 25px;
+}
+.agt-tst-item-3 {
+	margin: 0 auto;
+	border-radius: 8px;
+	padding: 35px 40px;
+	background-color: #FAF9F5;
+	transition: 700ms var(--agn-cube-1);
+	@media #{$xxs} {
+		padding: 20px 30px;
+	}
+	&.ver_2 {
+		border: 1px solid #2A34421F;
+		background-color: transparent;
+		transition: all 500ms ease-in-out;
+		&:hover {
+			border: 1px solid transparent;
+			box-shadow: 6px 6px 32px 0px #0000001F;
+		}
+	}
+	.item-author-img {
+		gap: 15px;
+		padding-bottom: 44px;
+		border-bottom: 1px solid rgba(30, 30, 30, 0.20);
+	}
+	.author-name {
+		flex-direction: column;
+		.item-name {
+			width: 100%;
+			h3 {
+				font-size: 22px;
+				font-weight: 600;
+				line-height: 1.28;
+				padding-bottom: 4px;
+				color: var(--agn-clr-black-3);
+			}
+			span {
+				color: #404046;
+				font-size: 16px;
+			}
+		}
+		.item-rate {
+			width: 100%;
+			li {
+				font-size: 15px;
+				color: var(--agt-base-color-4);
+			}
+		}
+	}
+	.item-text {
+		p {
+			font-size: 20px;
+			line-height: 1.6;
+			font-weight: 500;
+			padding-top: 36px;
+			font-style: italic;
+			position: relative;
+			color: var(--agn-clr-black-9);
+			span {
+				color: var(--agt-base-color-4);
+			}
+		}
+	}
+	&:hover {
+		background-color: #fff;
+	}
+}
+.agt-tst-more {
+	z-index: 1;
+	padding: 10px 15px;
+	span {
+		height: 100%;
+	}
+	.agt-tst-shape {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		height: 100%;
+		position: absolute;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+.agt-tst-pagination-4 {
+	.swiper-pagination-bullet {
+		opacity: 1;
+		width: 23px;
+		height: 23px;
+		position: relative;
+		margin: 8px 0px !important;
+		transition: all 500ms ease-in-out;
+		background-color: transparent;
+		&:before {
+			top: 8px;
+			left: 8px;
+			width: 6px;
+			height: 6px;
+			content: '';
+			position: absolute;
+			border-radius: 100%;
+			background-color: rgba(33, 35, 38, .40);
+		}
+		&:after {
+			top: -1px;
+			left: -1px;
+			content: '';
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			border-radius: 100%;
+			transform: scale(0);
+			transition: all 500ms ease-in-out;
+			border: 1px solid var(--agt-base-color-8);
+		}
+		&.swiper-pagination-bullet-active {
+			&:after {
+				transform: scale(1.0);
+			}
+		}
+	}
+}
